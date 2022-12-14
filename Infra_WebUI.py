@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 #import matplotlib.pyplot as plt
-plt.style.use('Solarize_Light2')
+#plt.style.use('Solarize_Light2')
 import math
 import datetime
 import joblib
