@@ -167,17 +167,16 @@ st.write ("ahmed.darwish@rakuten.com")
 st.write ("")
 st.write ("") 
 
-footer {
-	
-	visibility: hidden;
-	
-	}
-footer:after {
-	content:'goodbye'; 
-	visibility: visible;
-	display: block;
-	position: relative;
-	#background-color: red;
-	padding: 5px;
-	top: 2px;
-}
+footer="
+
+<style> your css code put here</style>
+
+<div class='footer'>
+
+<p>the word you want to tell<a style='display:block;text-align:center;' 
+
+href='https://www.streamlit.io' target='_blank'>your email address put here</a></p>
+
+</div>"
+
+st.markdown(footer, unsafe_allow_html=True)
