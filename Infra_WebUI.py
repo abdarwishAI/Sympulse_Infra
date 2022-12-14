@@ -20,7 +20,15 @@ from datetime import date
 from datetime import datetime, timedelta
 import streamlit as st
 
-# Get the Stock price
+# hide burger menue
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
+# import streamlit
 import datetime
 from datetime import date
 from PIL import Image
