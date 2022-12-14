@@ -166,3 +166,18 @@ st.write ('Developed By: Ahmed B. Darwish')
 st.write ("ahmed.darwish@rakuten.com")
 st.write ("")
 st.write ("") 
+
+footer {
+	
+	visibility: hidden;
+	
+	}
+footer:after {
+	content:'goodbye'; 
+	visibility: visible;
+	display: block;
+	position: relative;
+	#background-color: red;
+	padding: 5px;
+	top: 2px;
+}
