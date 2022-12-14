@@ -9,7 +9,7 @@ import numpy as np
 #import pandas_datareader as web
 import pandas as pd
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 plt.style.use('Solarize_Light2')
 import math
 import datetime
