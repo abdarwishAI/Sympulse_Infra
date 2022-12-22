@@ -56,7 +56,7 @@ colum1.image(image, caption=None, width=None, use_column_width=None, clamp=False
 colum2.title('Sympulse Infra Dimensioning')
 st.write ("___________________________________________________________")
 
-st.subheader("**Probe Solution Infra Calculator**")
+st.subheader("**Sympulse Infra Calculator**")
 col1, col2, col3 = st.columns([1, 1, 1])
 #st.text_input("Enter Stock Symbol 'Ticker' examples:   FB  ,  MSFT  ,  TWTR ,  AAPL " , "TWTR")
 
