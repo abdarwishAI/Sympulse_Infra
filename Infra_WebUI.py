@@ -105,7 +105,7 @@ Sympulse_Service = st.selectbox(
     ('All', 'Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
 
 if Sympulse_Service == 'All':
-    col_1, col_2, col_3, col_4, col_5 = st.columns([0.5, 0.5, 0.5, 0.5, 0.5])
+    col_1, col_2, col_3, col_4, col_5 = st.columns([1, 1, 1, 1, 1])
     
     col_1.write('Consumer')
     col_1_pods = col_1.number_input('No. of pods', 1, 100, value=(4))
@@ -120,7 +120,7 @@ if Sympulse_Service == 'All':
     col_4_pods = col_4.number_input('No. of pods', 1, 100, value=(4))
     
     col_5.write('Screenshare')    
-    col_5_pods = col_5.number_input('No. of pods', 1, 100, value=(10))
+    col_5_pods = col_5.number_input('Connections', 1, 100, value=(10))
 
     col_1_pods_RAM_GB = round((col_1_pods * 10),1)
     col_1_pods_CPU_Cores = round((col_1_pods * 4),1)
