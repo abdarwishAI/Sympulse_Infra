@@ -102,7 +102,7 @@ st.write(result_table_probe)
 st.subheader("**Microservices Infra Dimensioning**")
 Sympulse_Service = st.selectbox(
     'Select Microservice Name',
-    ('All', 'Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
+    ('All Sympulse Microservices', 'Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
 
 if Sympulse_Service == 'All':
     col_1, col_2, col_3, col_4, col_5 = st.columns([1, 1, 1, 1, 1])
