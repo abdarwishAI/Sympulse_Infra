@@ -112,7 +112,7 @@ if Sympulse_Service == 'All':
     
     col_2.write('Enterprise')    
     col_2_pods = col_2.number_input('No. of pods', 1, 100, value=(6))
-
+    
     col_3.write('Report')
     col_3_pods = col_3.number_input('No. of pods', 1, 100, value=(6))
     
