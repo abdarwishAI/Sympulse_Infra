@@ -133,8 +133,8 @@ if Sympulse_Service == 'All':
     col_5_pods_RAM_GB = round((col_5_pods * 12),1)
     col_5_pods_CPU_Cores = round((col_5_pods * 6),1)
     
-    Total_RAM_GB = col_1_pods_RAM_GB + col_2_pods_RAM_GB + col_3_pods_RAM_GB + col_4_pods_RAM_GB + col_5_pods_RAM_GB
-    Total_CPU_Cores = col_1_pods_CPU_Cores + col_2_pods_CPU_Cores + col_3_pods_CPU_Cores + col_4_pods_CPU_Cores + col_5_pods_CPU_Cores
+    Total_RAM_GB = col_1_pods_RAM_GB + col_2_pods_RAM_GB + col_3_pods_RAM_GB + col_4_pods_RAM_GB + col_5_pods_RAM_GB + 180
+    Total_CPU_Cores = col_1_pods_CPU_Cores + col_2_pods_CPU_Cores + col_3_pods_CPU_Cores + col_4_pods_CPU_Cores + col_5_pods_CPU_Cores + 45
     
     results_consumer = {'Total_RAM(GB) =':Total_RAM_GB, 
                         'CPU_Cores = ':Total_CPU_Cores}
