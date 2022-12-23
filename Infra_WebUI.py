@@ -108,19 +108,19 @@ if Sympulse_Service == 'All Sympulse Microservices':
     col_1, col_2, col_3, col_4, col_5 = st.columns([1, 1, 1, 1, 1])
     
     col_1.write('Consumer')
-    col_1_pods = col_1.number_input('No. of pods', 1, 100, value=(4))
+    col_1_pods = col_1.number_input('No. of pods', 0, 100, value=(4))
     
     col_2.write('Enterprise')    
-    col_2_pods = col_2.number_input('No. of pods', 1, 100, value=(6))
+    col_2_pods = col_2.number_input('No. of pods', 0, 100, value=(6))
     
     col_3.write('Report')
-    col_3_pods = col_3.number_input('No. of pods', 1, 100, value=(6), key = "third")
+    col_3_pods = col_3.number_input('No. of pods', 0, 100, value=(6), key = "third")
     
     col_4.write('Streaming')    
-    col_4_pods = col_4.number_input('No. of pods', 1, 100, value=(4), key = "forth")
+    col_4_pods = col_4.number_input('No. of pods', 0, 100, value=(4), key = "forth")
     
     col_5.write('Screenshare')    
-    col_5_pods = col_5.number_input('Connections', 1, 100, value=(10), key = "fifth")
+    col_5_pods = col_5.number_input('Connections', 0, 100, value=(10), key = "fifth")
 
     col_1_pods_RAM_GB = round((col_1_pods * 10),1)
     col_1_pods_CPU_Cores = round((col_1_pods * 4),1)
