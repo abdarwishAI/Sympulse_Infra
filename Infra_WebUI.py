@@ -98,13 +98,51 @@ result_table_probe = pd.DataFrame.from_dict(results, orient='index',
 st.write(result_table_probe)
 
 #
-#st.write("**Infra Dimensioning per Sympulse Service Name**")
-st.subheader("**Infra Dimensioning per Sympulse Service Name**")
+#st.write("**Microservices Infra Dimensioning**")
+st.subheader("**Microservices Infra Dimensioning**")
 Sympulse_Service = st.selectbox(
-    'Select Sympulse Service Name',
-    ('Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
+    'Select Microservice Name',
+    ('All', 'Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
 
+if Sympulse_Service == 'All':
+    col_1, col_2, col_3, col_4, col_5 = st.columns([1, 1, 1, 1, 1])
+    
+    col_1.write('Sympulse_consumer')
+    col_1_pods = col_1.number_input('No. of pods', 1, 100, value=(4))
+    
+    col_2.write('Sympulse_Enterprise')    
+    col_2_pods = col_2.number_input('No. of pods', 1, 100, value=(6))
 
+    col_3.write('Sympulse_Report')
+    col_3_pods = col_3.number_input('No. of pods', 1, 100, value=(6))
+    
+    col_4.write('Sympulse_Streaming')    
+    col_4_pods = col_4.number_input('No. of pods', 1, 100, value=(4))
+    
+    col_5.write('Screenshare')    
+    col_5_pods = col_5.number_input('No. of pods', 1, 100, value=(10))
+
+    col_1_pods_RAM_GB = round((col_1_pods * 10),1)
+    col_1_pods_CPU_Cores = round((col_1_pods * 4),1)
+    col_2_pods_RAM_GB = round((col_2_pods * 16),1)
+    col_2_pods_CPU_Cores = round((col_2_pods * 4),1)
+    col_3_pods_RAM_GB = round((col_3_pods * 16),1)
+    col_3_pods_CPU_Cores = round((col_3_pods * 4),1)
+    col_4_pods_RAM_GB = round((col_4_pods * 6),1)
+    col_4_pods_CPU_Cores = round((col_4_pods * 4),1)
+    col_5_pods_RAM_GB = round((col_5_pods * 12),1)
+    col_5_pods_CPU_Cores = round((col_5_pods * 6),1)
+    
+    Total_RAM_GB = col_1_pods_RAM_GB + col_2_pods_RAM_GB + col_3_pods_RAM_GB + col_4_pods_RAM_GB + col_5_pods_RAM_GB
+    Total_CPU_Cores = col_1_pods_CPU_Cores + col_2_pods_CPU_Cores + col_3_pods_CPU_Cores + col_4_pods_CPU_Cores + col_5_pods_CPU_Cores
+    
+    results_consumer = {'Total_RAM(GB) =':Total_RAM_GB, 
+                        'CPU_Cores = ':Total_CPU_Cores}
+    
+    result_table_consumer = pd.DataFrame.from_dict(results_consumer, orient='index',
+                           columns=['infra_required'])
+    
+    st.write(result_table_consumer)
 
 if Sympulse_Service == 'Sympulse Consumer':
     col4, col5, col6 = st.columns([1, 1, 1])
