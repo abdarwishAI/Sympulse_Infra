@@ -105,18 +105,18 @@ Sympulse_Service = st.selectbox(
     ('All', 'Sympulse Consumer', 'Sympulse Enterprise', 'Sympulse Report', 'Sympulse Streaming', 'Sympule Screenshare'))
 
 if Sympulse_Service == 'All':
-    col_1, col_2, col_3, col_4, col_5 = st.columns([1, 1, 1, 1, 1])
+    col_1, col_2, col_3, col_4, col_5 = st.columns([0.5, 0.5, 0.5, 0.5, 0.5])
     
-    col_1.write('Sympulse_consumer')
+    col_1.write('Consumer')
     col_1_pods = col_1.number_input('No. of pods', 1, 100, value=(4))
     
-    col_2.write('Sympulse_Enterprise')    
+    col_2.write('Enterprise')    
     col_2_pods = col_2.number_input('No. of pods', 1, 100, value=(6))
 
-    col_3.write('Sympulse_Report')
+    col_3.write('Report')
     col_3_pods = col_3.number_input('No. of pods', 1, 100, value=(6))
     
-    col_4.write('Sympulse_Streaming')    
+    col_4.write('Streaming')    
     col_4_pods = col_4.number_input('No. of pods', 1, 100, value=(4))
     
     col_5.write('Screenshare')    
